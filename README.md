@@ -1,2 +1,2 @@
-# Geo-cCoud
+# Geo-Cloud
 This project is a weather application that provides real-time weather updates for any location worldwide.
