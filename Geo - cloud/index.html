@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo-Cloud</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="weather-card">
+            <div class="search-section">
+                <input type="text" id="city-input" placeholder="City, State, Country..." spellcheck="false">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="weather-content" id="weather-content" style="display: none;">
+                
+                <div class="location-time-box">
+                    <p class="city-name" id="location-name">City Name</p>
+                    <p class="current-time" id="current-datetime">Loading...</p>
+                </div>
+
+                <div class="main-temperature-box">
+                    <img src="assets/default.png" class="weather-icon" id="weather-icon-img" alt="Weather Icon">
+                    <h1 class="temperature-val" id="temperature-display">--°C</h1>
+                    <p class="weather-desc" id="weather-description">Description</p>
+                </div>
+                
+                <div class="detail-container">
+                    <h3 class="detail-header">Current Conditions</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <i class="fas fa-wind icon-detail"></i>
+                            <p class="value" id="wind-speed-display">-- m/s</p>
+                            <p class="label">Wind Speed</p>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tint icon-detail"></i>
+                            <p class="value" id="humidity-display">--%</p>
+                            <p class="label">Humidity</p>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-cloud icon-detail"></i>
+                            <p class="value" id="cloudiness-display">--%</p>
+                            <p class="label">Cloud</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-message" id="error-msg" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i> City not found. Please check the spelling.
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
